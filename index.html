@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma Essaoud — Cybersécurité | Red Team &amp; Blue Team</title>
+<meta name="description" content="Portfolio de Salma Essaoud, étudiante ingénieure en cybersécurité (Red Team & Blue Team) à la recherche d'un stage PFE.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+<div class="scanline" aria-hidden="true"></div>
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-bracket">&lt;</span>SE<span class="logo-bracket">/&gt;</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-nav>Profil</a>
+      <a href="#experience" data-nav>Expérience</a>
+      <a href="#projects" data-nav>Projets</a>
+      <a href="#ctf" data-nav>CTF</a>
+      <a href="#skills" data-nav>Compétences</a>
+      <a href="#certifications" data-nav>Formations</a>
+      <a href="#contact" data-nav class="nav-cta">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <canvas id="netCanvas" class="net-canvas" aria-hidden="true"></canvas>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content container">
+      <p class="hero-eyebrow reveal">
+        <span class="dot-live"></span> Disponible pour un stage PFE — 2026/2027
+      </p>
+
+      <h1 class="hero-title reveal" style="--d:1">
+        Salma <span class="text-gradient">Essaoud</span>
+      </h1>
+
+      <div class="hero-role reveal" style="--d:2">
+        <span class="prompt">$</span>
+        <span id="typedRole" class="typed"></span><span class="cursor-blink">_</span>
+      </div>
+
+      <p class="hero-desc reveal" style="--d:3">
+        Élève ingénieure en 5<sup>ème</sup> année — Sécurité IT à la FST Marrakech (UCA).
+        Expérience équilibrée entre <strong>sécurité offensive</strong> (pentest, Active Directory, CTF)
+        et <strong>sécurité défensive</strong> (SOC, SIEM Wazuh, firewalling, IDS/IPS, durcissement système).
+      </p>
+
+      <div class="hero-actions reveal" style="--d:4">
+        <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+        <a href="assets/CV_Salma_Essaoud.pdf" class="btn btn-ghost" download>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+          CV (PDF)
+        </a>
+      </div>
+
+      <div class="hero-stats reveal" style="--d:5">
+        <div class="stat">
+          <span class="stat-num" data-count="6300">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Alertes SOC analysées</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="4">0</span>
+          <span class="stat-label">Projets techniques majeurs</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Compétitions CTF</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Défiler vers le bas">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT / PROFILE -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-tag reveal">01 — Profil</p>
+      <h2 class="section-title reveal">Purple Team dans l'âme</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Habituée aux laboratoires <strong>Purple Team</strong> complets — de l'attaque à la détection
+            et à la remédiation — je conçois des infrastructures, je les attaque pour comprendre leurs
+            failles, puis je construis la détection qui les révèle.
+          </p>
+          <p>
+            Je recherche un <strong>stage de fin d'études (PFE)</strong> pour approfondir mes compétences
+            sur des problématiques réelles, au sein d'une équipe sécurité offensive ou défensive.
+          </p>
+          <div class="about-tags">
+            <span class="chip chip-red">Red Team</span>
+            <span class="chip chip-blue">Blue Team</span>
+            <span class="chip chip-neutral">SOC</span>
+            <span class="chip chip-neutral">Active Directory</span>
+            <span class="chip chip-neutral">Reverse Engineering</span>
+            <span class="chip chip-neutral">Cryptographie</span>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="tdot" style="--c:#ff5f56"></span>
+              <span class="tdot" style="--c:#ffbd2e"></span>
+              <span class="tdot" style="--c:#27c93f"></span>
+              <span class="terminal-title">whoami.sh</span>
+            </div>
+            <div class="terminal-body">
+<pre><span class="t-cmd">$ whoami</span>
+salma.essaoud
+
+<span class="t-cmd">$ cat profile.json</span>
+{
+  <span class="t-key">"role"</span>: <span class="t-str">"Étudiante Ingénieure Sécurité IT"</span>,
+  <span class="t-key">"school"</span>: <span class="t-str">"FST Marrakech — UCA"</span>,
+  <span class="t-key">"focus"</span>: [<span class="t-str">"pentest"</span>, <span class="t-str">"SOC"</span>, <span class="t-str">"CTF"</span>],
+  <span class="t-key">"seeking"</span>: <span class="t-str">"Stage PFE 2026/2027"</span>,
+  <span class="t-key">"languages"</span>: [<span class="t-str">"FR"</span>, <span class="t-str">"EN"</span>]
+}
+
+<span class="t-cmd">$ echo $STATUS</span>
+<span class="t-ok">[OK]</span> disponible</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <p class="section-tag reveal">02 — Parcours</p>
+      <h2 class="section-title reveal">Expérience professionnelle</h2>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-marker tl-marker-blue"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Stagiaire SOC Analyst — Purple Team <span class="tl-tech">(Wazuh SIEM)</span></h3>
+              <span class="tl-date">Août — Sept. 2026</span>
+            </div>
+            <p class="tl-org">Iventeq · Marrakech</p>
+            <ul class="tl-list">
+              <li>Déploiement et administration d'une plateforme <strong>SIEM Wazuh</strong> et d'un pare-feu <strong>OPNsense</strong>/IDS <strong>Suricata</strong> sur un lab multi-VM ; règles de corrélation et décodeurs personnalisés pour détecter brute force SSH/RDP, scan Nmap, injection SQL et path traversal (couverture MITRE ATT&amp;CK, Syslog OPNsense → Wazuh).</li>
+              <li>Configuration d'un accès <strong>VPN SSL (OpenVPN)</strong> avec PKI interne ; simulation Red/Blue Team de vol d'identifiants VPN (impossible travel, connexions hors-horaires) avec alertes email automatisées.</li>
+              <li>Chaîne de détection malware (FIM, VirusTotal, règles <strong>YARA</strong>) avec réponse automatisée type EDR/XDR ; suivi de KPIs SOC (MTTD, taux de faux positifs) sur +6300 alertes.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Wazuh</span><span class="tag">OPNsense</span><span class="tag">Suricata</span>
+              <span class="tag">OpenVPN</span><span class="tag">YARA</span><span class="tag">MITRE ATT&amp;CK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker tl-marker-red"></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <h3>Stagiaire en Sécurité des Applications Web</h3>
+              <span class="tl-date">Juillet 2025</span>
+            </div>
+            <p class="tl-org">Norsys Afrique · Marrakech</p>
+            <ul class="tl-list">
+              <li>Conception et développement d'une application web de gestion de rendez-vous ; <strong>Spring Security</strong>, authentification <strong>JWT</strong>, gestion des rôles et contrôle d'accès.</li>
+              <li>Pratiques DevSecOps avec GitLab CI/CD dans un environnement Agile (Scrum).</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">GitLab CI/CD</span><span class="tag">Scrum</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-tag reveal">03 — Réalisations</p>
+      <h2 class="section-title reveal">Projets techniques</h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-glow project-glow-blue" aria-hidden="true"></div>
+          <div class="project-icon">🧱</div>
+          <h3>Architecture Entreprise Sécurisée</h3>
+          <p class="project-sub">OpenVPN · pfSense · Suricata</p>
+          <ul>
+            <li>Infrastructure multi-VM (pfSense, Ubuntu Server, Windows Client, Kali) avec segmentation WAN/LAN et VPN Client-to-Site OpenVPN (PKI interne, certificats SSL/TLS).</li>
+            <li>IDS/IPS Suricata en mode Inline avec règles personnalisées (scan Nmap, brute force SSH, ICMP flood) ; firewalling au moindre privilège.</li>
+            <li>Durcissement Ubuntu : SSH ED25519, PAM (pwquality, faillock), GRUB, UFW, sysctl anti-spoofing/SYN flood.</li>
+            <li>Simulation d'attaques (Nmap, Hydra, ping flood) et validation via Wireshark ; rapport technique complet.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">pfSense</span><span class="tag">Suricata</span><span class="tag">OpenVPN</span><span class="tag">Hardening</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-glow project-glow-red" aria-hidden="true"></div>
+          <div class="project-icon">🗝️</div>
+          <h3>Active Directory Attack &amp; Defense Lab</h3>
+          <p class="project-sub">Kill chain offensive complète</p>
+          <ul>
+            <li>Environnement Windows Server 2019 / Windows 10 / Kali Linux avec énumération LDAP via Nmap.</li>
+            <li>AS-REP Roasting, Kerberoasting, Pass-the-Hash, DCSync avec Impacket, Hashcat, BloodHound, CrackMapExec.</li>
+            <li>Cartographie des chemins d'attaque et rédaction d'un rapport CVSS détaillé.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Active Directory</span><span class="tag">BloodHound</span><span class="tag">Kerberos</span><span class="tag">CVSS</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-glow project-glow-purple" aria-hidden="true"></div>
+          <div class="project-icon">🔬</div>
+          <h3>Reverse Engineering &amp; Analyse Binaire</h3>
+          <p class="project-sub">Désassemblage &amp; instrumentation dynamique</p>
+          <ul>
+            <li>Analyse de binaires ELF/PE avec Ghidra ; désassemblage, déobfuscation et extraction de secrets hardcodés.</li>
+            <li>Instrumentation dynamique avec Frida : hooking de fonctions et contournement d'authentification.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Ghidra</span><span class="tag">Frida</span><span class="tag">ELF/PE</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-glow project-glow-green" aria-hidden="true"></div>
+          <div class="project-icon">📡</div>
+          <h3>Cryptographie Post-Quantique pour l'IoT</h3>
+          <p class="project-sub">Article de recherche</p>
+          <ul>
+            <li>Étude de la suitabilité des algorithmes <strong>ML-KEM/Kyber</strong> et <strong>ML-DSA/Dilithium</strong> pour l'IoT (benchmarking Raspberry Pi).</li>
+            <li>Conception d'un protocole <strong>QUIC Lite</strong> (UDP, 0-RTT) au chiffrement post-quantique bout en bout, résistant à Shor/Grover.</li>
+          </ul>
+          <div class="tl-tags">
+            <span class="tag">Post-Quantum</span><span class="tag">Kyber</span><span class="tag">Dilithium</span><span class="tag">IoT</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTF -->
+  <section class="section section-alt" id="ctf">
+    <div class="container">
+      <p class="section-tag reveal">04 — Compétitions</p>
+      <h2 class="section-title reveal">CTF &amp; Compétitions</h2>
+
+      <div class="ctf-grid">
+        <div class="ctf-card reveal">
+          <div class="ctf-badge">🏁</div>
+          <div>
+            <h3>ST4F1T CTF</h3>
+            <p class="ctf-org">GCDSTE / ENSA Marrakech — 2025</p>
+            <p>Reverse Engineering, Web Exploitation, Cryptographie, Pwn, Forensics.</p>
+          </div>
+        </div>
+        <div class="ctf-card reveal">
+          <div class="ctf-badge">🇲🇦</div>
+          <div>
+            <h3>MACC2026</h3>
+            <p class="ctf-org">DGSSI &amp; SecDojo</p>
+            <p>Compétition nationale de cybersécurité organisée par la Direction Générale de la Sécurité des Systèmes d'Information.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <p class="section-tag reveal">05 — Boîte à outils</p>
+      <h2 class="section-title reveal">Compétences techniques</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-red"></span>Sécurité Offensive</h3>
+          <div class="chip-group">
+            <span class="chip">Nmap</span><span class="chip">Hydra</span><span class="chip">BloodHound</span>
+            <span class="chip">CrackMapExec</span><span class="chip">Kerberoasting</span><span class="chip">AS-REP Roasting</span>
+            <span class="chip">Pass-the-Hash</span><span class="chip">DCSync</span><span class="chip">Ghidra</span>
+            <span class="chip">Frida</span><span class="chip">CVE/CVSS</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-blue"></span>Sécurité Défensive / SOC</h3>
+          <div class="chip-group">
+            <span class="chip">Wazuh</span><span class="chip">Suricata</span><span class="chip">pfSense</span>
+            <span class="chip">OPNsense</span><span class="chip">FortiGate</span><span class="chip">OpenVPN / SSL VPN</span>
+            <span class="chip">PKI</span><span class="chip">YARA</span><span class="chip">VirusTotal</span>
+            <span class="chip">MITRE ATT&amp;CK</span><span class="chip">Splunk</span><span class="chip">Wireshark</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-purple"></span>Durcissement Systèmes</h3>
+          <div class="chip-group">
+            <span class="chip">SSH ED25519</span><span class="chip">PAM</span><span class="chip">GRUB</span>
+            <span class="chip">UFW</span><span class="chip">sysctl</span><span class="chip">Gestion des accès</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-green"></span>Cryptographie</h3>
+          <div class="chip-group">
+            <span class="chip">AES</span><span class="chip">RSA</span><span class="chip">Diffie-Hellman</span>
+            <span class="chip">SHA-256</span><span class="chip">ML-KEM / Kyber</span><span class="chip">ML-DSA / Dilithium</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-amber"></span>Programmation &amp; Web</h3>
+          <div class="chip-group">
+            <span class="chip">Python</span><span class="chip">C</span><span class="chip">Java</span>
+            <span class="chip">JavaScript</span><span class="chip">PHP / Laravel</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><span class="skill-dot skill-dot-cyan"></span>Systèmes &amp; Réseaux</h3>
+          <div class="chip-group">
+            <span class="chip">Linux</span><span class="chip">Windows</span><span class="chip">Active Directory</span>
+            <span class="chip">Kerberos</span><span class="chip">Apache2</span><span class="chip">Git / GitHub / GitLab</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <p class="section-tag reveal">06 — Formation</p>
+      <h2 class="section-title reveal">Éducation &amp; Certifications</h2>
+
+      <div class="edu-grid">
+        <div class="edu-col reveal">
+          <h3 class="edu-col-title">Éducation</h3>
+
+          <div class="edu-item">
+            <div class="edu-year">2024 — 2027</div>
+            <div>
+              <h4>Cycle d'Ingénieur en Sécurité IT</h4>
+              <p>FST Marrakech — Université Cadi Ayyad · 5<sup>ème</sup> année (PFE)</p>
+            </div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-year">2022 — 2024</div>
+            <div>
+              <h4>DEUST — MIPC</h4>
+              <p>FST Marrakech — Université Cadi Ayyad</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-col reveal">
+          <h3 class="edu-col-title">Certifications</h3>
+
+          <div class="cert-item">
+            <span class="cert-icon">🎓</span>
+            <div>
+              <h4>Ethical Hacker &amp; Introduction à la cybersécurité</h4>
+              <p>Cisco Networking Academy</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-icon">🎓</span>
+            <div>
+              <h4>Cybersecurity 101</h4>
+              <p>TryHackMe</p>
+            </div>
+          </div>
+          <div class="cert-item">
+            <span class="cert-icon">🎓</span>
+            <div>
+              <h4>SOC Analyst Prerequisites</h4>
+              <p>HackTheBox</p>
+            </div>
+          </div>
+
+          <h3 class="edu-col-title edu-col-title-spaced">Langues</h3>
+          <div class="lang-row">
+            <span class="chip chip-neutral">🇫🇷 Français — courant</span>
+            <span class="chip chip-neutral">🇬🇧 Anglais — courant</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <p class="section-tag reveal">07 — Contact</p>
+      <h2 class="section-title reveal">Construisons quelque chose de sécurisé</h2>
+      <p class="contact-lead reveal">
+        Ouverte à toute opportunité de stage PFE en sécurité offensive ou défensive.
+        N'hésitez pas à me contacter.
+      </p>
+
+      <div class="contact-grid reveal">
+        <a href="mailto:essaoudsalma011@gmail.com" class="contact-card">
+          <span class="contact-icon">✉️</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">essaoudsalma011@gmail.com</span>
+        </a>
+        <a href="tel:+212632239110" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <span class="contact-label">Téléphone</span>
+          <span class="contact-value">+212 6 32 23 91 10</span>
+        </a>
+        <a href="https://www.linkedin.com/in/salma-essaoud-7b8381267/" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">/in/salma-essaoud</span>
+        </a>
+        <a href="https://github.com/SALMA-ESSAOUD" target="_blank" rel="noopener" class="contact-card">
+          <span class="contact-icon">🐙</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">@SALMA-ESSAOUD</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Salma Essaoud. Tous droits réservés.</span>
+    <span class="footer-tagline">Construit avec HTML, CSS &amp; JS — hébergé sur GitHub Pages.</span>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Retour en haut">↑</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
