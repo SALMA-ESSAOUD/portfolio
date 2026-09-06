@@ -160,7 +160,7 @@ sup { font-size: 0.65em; }
 .hero-text { max-width: 640px; }
 
 .hero-photo-wrap {
-  position: relative; width: 190px; height: 190px; flex-shrink: 0;
+  position: relative; width: 190px; height: 190px; flex-shrink: 0; margin-bottom: 18px;
 }
 .hero-photo-ring {
   position: absolute; inset: -14px; border-radius: 50%;
@@ -175,10 +175,10 @@ sup { font-size: 0.65em; }
   position: relative; z-index: 1; background: var(--surface);
 }
 .hero-photo-badge {
-  position: absolute; bottom: 2px; right: -6px; z-index: 2;
-  display: inline-flex; align-items: center; gap: 6px;
+  position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); z-index: 2;
+  display: inline-flex; align-items: center; gap: 6px; white-space: nowrap;
   background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px;
-  padding: 5px 12px; font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent);
+  padding: 5px 12px; font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent);
   box-shadow: 0 6px 18px -8px rgba(0,0,0,0.6);
 }
 
